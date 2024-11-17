@@ -246,8 +246,7 @@ PRODUCT_PACKAGES += \
     ApertureResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
-    OplusDozeResTarget \
-    PowerOffAlarmResTarget
+    OplusDozeResTarget 
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -267,10 +266,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# Power-off Alarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
