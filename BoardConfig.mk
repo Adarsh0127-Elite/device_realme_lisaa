@@ -37,13 +37,10 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     hardware/oplus/vintf/device_framework_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_FILES += $(DEVICE_PATH)/manifest_odm.xml
-
-# Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
