@@ -10,8 +10,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "fstab.mt6983",
-    src: "fstab.mt6983",
+    name: "fstab.mt6895",
+    src: "fstab.mt6895",
     vendor: true,
     vendor_ramdisk_available: true,
 }
@@ -38,22 +38,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6983.rc",
-    src: "init.mt6983.rc",
+    name: "init.mt6895.rc",
+    src: "init.mt6895.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.mt6983.power.rc",
-    src: "init.mt6983.power.rc",
+    name: "init.mt6895.power.rc",
+    src: "init.mt6895.power.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.mt6983.usb.rc",
-    src: "init.mt6983.usb.rc",
+    name: "init.mt6895.usb.rc",
+    src: "init.mt6895.usb.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
@@ -94,9 +94,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.mt6983.rc",
+    name: "ueventd.mt6895.rc",
     filename: "ueventd.rc",
-    src: "ueventd.mt6983.rc",
+    src: "ueventd.mt6895.rc",
     vendor: true,
 }
 

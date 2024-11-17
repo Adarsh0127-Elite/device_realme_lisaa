@@ -36,9 +36,12 @@ bluetooth.profile.opp.enabled=true
 bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=true
-ro.vendor.bt.platform=6983
+bluetooth.profile.sap.server.enabled=false
+persist.bluetooth.a2dp_offload.disabled=false
+persist.vendor.bluetooth.leaudio_mode=ums-cg
+ro.bluetooth.a2dp_offload.supported=true
+ro.vendor.bt.platform=6895
 
 # Bootloader
 ro.oem_unlock_supported=1
@@ -166,7 +169,7 @@ vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=15
 
 # Netflix
-ro.netflix.bsp_rev=MTK6983-35029-1
+ro.netflix.bsp_rev=MTK6895-35027-1
 
 # Neural Networks
 ro.vendor.mtk_nn_baseline_support=1
@@ -205,7 +208,7 @@ ro.vendor.pq.mtk_ultra_resolution_support=0
 ro.vendor.pq.mtk_video_transition=0
 
 # Platform
-ro.vendor.mediatek.platform=MT6983
+ro.vendor.mediatek.platform=MT6895
 
 # Power
 vendor.powerhal.interaction.min=10
@@ -295,7 +298,7 @@ ro.apk_verity.mode=2
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi_connac2
-ro.vendor.wlan.gen=gen4m_6983
+ro.vendor.wlan.gen=gen4m_6895
 
 # Zygote
 zygote.critical_window.minute=10

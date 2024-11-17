@@ -84,8 +84,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2772
-TARGET_SCREEN_WIDTH := 1240
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -167,24 +167,24 @@ $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 # Init
 PRODUCT_PACKAGES += \
     fstab.enableswap \
-    fstab.mt6983 \
-    fstab.mt6983.vendor_ramdisk \
+    fstab.mt6895 \
+    fstab.mt6895.vendor_ramdisk \
     init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
-    init.mt6983.rc \
-    init.mt6983.power.rc \
-    init.mt6983.usb.rc \
+    init.mt6895.rc \
+    init.mt6895.power.rc \
+    init.mt6895.usb.rc \
     init.mtkgki.rc \
     init.oplus.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     init_conninfra.rc \
-    ueventd.mt6983.rc \
+    ueventd.mt6895.rc \
     ueventd.oplus.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.recovery.mt6983.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6983.rc
+    $(LOCAL_PATH)/init/init.recovery.mt6895.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6895.rc
 
 # IR
 PRODUCT_PACKAGES += \
@@ -378,4 +378,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/oneplus/vitamin/vitamin-vendor.mk)
+$(call inherit-product, vendor/oneplus/pickle/pickle-vendor.mk)

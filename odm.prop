@@ -17,8 +17,16 @@ ro.odm.build.media_performance_class=31
 # NFC
 ro.camera.notify_nfc=1
 
-# Picture Quality
-persist.vendor.sys.pq.disp.ccorr.silky.brightness=1
+# Radio
+persist.vendor.vonr_setting_support=1
+
+# SoC
+ro.soc.manufacturer=Mediatek
+ro.soc.model=MT6895
+
+# Project
+ro.product.hw=21862
+ro.separate.soft=21862
 
 # Sensor
 ro.vendor.oplus.sensor.report_brightness=true

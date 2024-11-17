@@ -4,6 +4,12 @@
 #
 
 on init
+    # Camera
+    ## The two pickle variant  have a different main camera sensor (CN = OV64B and GLO = IMX890).
+    ## Our vendor camera blobs read CameraHWConfiguration.config which is variant specific unfortunately.
+    ## Instead of making a whole separate target just for the CN variant, let's make use of overlay fs.
+    mount overlay overlay /odm/etc lowerdir=/odm/overlay/prj_${ro.boot.prjname}/odm/etc:/odm/etc
+
     # Charger
     chown system system /dev/chg_test_kit
     chown system system /dev/oplus_chg
