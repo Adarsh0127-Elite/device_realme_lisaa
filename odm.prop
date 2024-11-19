@@ -25,8 +25,8 @@ ro.soc.manufacturer=Mediatek
 ro.soc.model=MT6895
 
 # Project
-ro.product.hw=21862
-ro.separate.soft=21862
+ro.product.hw=21642
+ro.separate.soft=21642
 
 # Sensor
 ro.vendor.oplus.sensor.report_brightness=true

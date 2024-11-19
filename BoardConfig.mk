@@ -5,12 +5,12 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-DEVICE_PATH := device/oneplus/pickle
+DEVICE_PATH := device/realme/lisaa
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a-dotprod
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a55
@@ -23,12 +23,12 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := k6983v1_64
+TARGET_BOOTLOADER_BOARD_NAME := k6895v1_64
 TARGET_USES_UEFI := true
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 385
+TARGET_SCREEN_DENSITY := 480
 
 # FOD
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
@@ -80,7 +80,7 @@ TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
 TARGET_FORCE_PREBUILT_KERNEL := true
 
 TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_KERNEL_SOURCE := device/oneplus/pickle-kernel/kernel-headers
+TARGET_KERNEL_SOURCE := device/realme/lisaa-kernel/kernel-headers
 
 #TARGET_KERNEL_SOURCE := kernel/mediatek/k510
 #TARGET_KERNEL_CONFIG := \
@@ -124,7 +124,7 @@ AB_OTA_PARTITIONS += \
 BOARD_USES_METADATA_PARTITION := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_DTBOIMG_PARTITION_SIZE := 33554432
+BOARD_DTBOIMG_PARTITION_SIZE := 3002368
 BOARD_FLASH_BLOCK_SIZE := $(BOARD_KERNEL_PAGESIZE)
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 
@@ -154,18 +154,12 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
-<<<<<<< HEAD
-TARGET_BOARD_PLATFORM := mt6983
-
-# Power
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //hardware/oplus:libperfmgr-ext-oplus
-=======
-BOARD_HAS_MTK_HARDWARE := true
 TARGET_BOARD_PLATFORM := mt6895
 
 # Power
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(DEVICE_PATH)/power:libperfmgr-ext-pickle
->>>>>>> 4dfe791 (pickle: Initial rebrand for Oneplus 10R)
+TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //hardware/oplus:libperfmgr-ext-oplus
+BOARD_HAS_MTK_HARDWARE := true
+TARGET_BOARD_PLATFORM := mt6895
 
 # Recovery
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
@@ -225,4 +219,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_FEATURE_HOSTAPD_11AX := true
 
 # Inherit the proprietary files
-include vendor/oneplus/pickle/BoardConfigVendor.mk
+include vendor/realme/lisaa/BoardConfigVendor.mk

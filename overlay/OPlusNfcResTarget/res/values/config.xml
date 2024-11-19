@@ -8,6 +8,6 @@
     <bool name="enable_secure_nfc_support">true</bool>
     <!-- List of SKUs where Secure NFC functionality is supported -->
     <string-array name="config_skuSupportsSecureNfc">
-        <item>pickle</item>
+        <item>lisaa</item>
     </string-array>
 </resources>
