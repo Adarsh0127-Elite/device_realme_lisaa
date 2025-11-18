@@ -1,4 +1,5 @@
-#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#!/usr/bin/env -S PYTHONPATH=extract_utils python3
+import os
 #
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
@@ -19,7 +20,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/oneplus/vitamin',
+    'device/realme/lisaa',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'hardware/oplus',
@@ -39,7 +40,7 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/lib64/libPanelChaplin_mtk.so',
-        'vendor/lib64/mt6983/libmtkcam_stdutils.so'
+        'vendor/lib64/mt6895/libmtkcam_stdutils.so'
     ): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'odm/lib64/vendor.oplus.hardware.hdcp-V1-ndk_platform.so': blob_fixup()
@@ -74,7 +75,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/bin/mnld',
         'vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so',
         'vendor/lib64/liboplus_mtkcam_lightsensorprovider.so',
-        'vendor/lib64/mt6983/libaalservice.so'
+        'vendor/lib64/mt6895/libaalservice.so'
     ): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
@@ -82,29 +83,29 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libalsautils.so', 'libalsautils-v31.so'),
     (
         'vendor/lib64/hw/hwcomposer.mtk_common.so',
-        'vendor/lib64/mt6983/libcam.hal3a.so',
-        'vendor/lib64/mt6983/libcam.hal3a.ctrl.so',
-        'vendor/lib64/mt6983/libmtkcam_request_requlator.so',
+        'vendor/lib64/mt6895/libcam.hal3a.so',
+        'vendor/lib64/mt6895/libcam.hal3a.ctrl.so',
+        'vendor/lib64/mt6895/libmtkcam_request_requlator.so',
         'vendor/lib64/libcustomer_cameradata.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    'vendor/lib64/hw/mt6983/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
+    'vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
         .add_needed('libcamera_metadata_shim.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
-    'vendor/lib64/hw/mt6983/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
+    'vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
         .binary_regex_replace(b'/my_product/vendor/etc/cust_silky_brightness_%s_%s.xml', b'/vendor/etc/cust_silky_brightness_%s_%s.xml\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
         .binary_regex_replace(b'/my_product/vendor/etc/cust_silky_brightness_%s.xml', b'/vendor/etc/cust_silky_brightness_%s.xml\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
         .replace_needed('libutils.so', 'libutils-v32.so'),
     (
-        'vendor/lib64/mt6983/lib3a.awbsync.so',
-        'vendor/lib64/mt6983/lib3a.flash.so',
-        'vendor/lib64/mt6983/lib3a.sensors.color.so',
-        'vendor/lib64/mt6983/lib3a.sensors.flicker.so',
+        'vendor/lib64/mt6895/lib3a.awbsync.so',
+        'vendor/lib64/mt6895/lib3a.flash.so',
+        'vendor/lib64/mt6895/lib3a.sensors.color.so',
+        'vendor/lib64/mt6895/lib3a.sensors.flicker.so',
         'vendor/lib64/lib3a.ae.pipe.so'
     ): blob_fixup()
         .add_needed('liblog.so'),
-    'vendor/lib64/mt6983/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
+    'vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_createFromHandle')
         .clear_symbol_version('AHardwareBuffer_describe')
@@ -113,7 +114,7 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock')
         .add_needed('libbase_shim.so'),
-    'vendor/lib64/mt6983/libmnl.so': blob_fixup()
+    'vendor/lib64/mt6895/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
     'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
         .replace_needed('android.frameworks.stats-V1-ndk_platform.so', 'android.frameworks.stats-V1-ndk.so'),
@@ -125,8 +126,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'vitamin',
-    'oneplus',
+    'lisaa',
+    'realme',
     add_firmware_proprietary_file=True,
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -134,5 +135,6 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
+    module.proprietary_file_dir = "/home/Thundergod/los/device/realme/lisaa/"
     utils = ExtractUtils.device(module)
     utils.run()

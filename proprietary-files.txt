@@ -1,11 +1,14 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus Nord 10R 5G (CPH2423_14.0.0.640(EX01)).
+## are from GT Neo 3 (RMX3563_14.0.0.2200(EX01)).
 
 # AEE
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 
 # Audio
+odm/lib64/lib_aurisys_lvimfs.so
+odm/lib64/liblvimfs.so
+odm/lib64/liblvimfs_wrapper.so
 odm/lib64/libnxprecord.so;FIX_SONAME
 odm/lib64/libnxpsmartpaparser.so
 odm/lib64/libnxpspeech.so
@@ -60,6 +63,10 @@ vendor/etc/aurisys_config_rv.xml
 odm/etc/audio/audio_device/audio_device.xml
 odm/etc/audio/audio_device/common/audio_device.xml
 vendor/etc/audio_device.xml
+vendor/etc/audio_effects.xml
+vendor/etc/audio_em.xml
+vendor/etc/audio_policy.conf
+vendor/etc/audio_policy_configuration.xml
 
 # Audio (Features)
 odm/etc/audio/oplus_audio_features.xml

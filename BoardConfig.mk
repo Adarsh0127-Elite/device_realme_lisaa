@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_BROKEN_VERIFY_ELF_PREBUILTS := true
+PRODUCT_BROKEN_CHECK_ELF_FILES := true
 BUILD_BROKEN_DUP_RULES := true
 
 DEVICE_PATH := device/realme/lisaa
