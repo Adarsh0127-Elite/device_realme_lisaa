@@ -1,5 +1,4 @@
-#!/usr/bin/env -S PYTHONPATH=extract_utils python3
-import os
+#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
@@ -135,6 +134,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    module.proprietary_file_dir = "/home/Thundergod/los/device/realme/lisaa/"
     utils = ExtractUtils.device(module)
     utils.run()
