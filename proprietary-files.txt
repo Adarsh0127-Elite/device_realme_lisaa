@@ -6,6 +6,7 @@ vendor/lib64/libladder.so
 odm/lib64/lib_aurisys_lvimfs.so
 odm/lib64/liblvimfs.so
 odm/lib64/liblvimfs_wrapper.so
+odm/lib64/libstdc++.so
 odm/lib64/libnxprecord.so;FIX_SONAME
 odm/lib64/libnxpsmartpaparser.so
 odm/lib64/libnxpspeech.so
