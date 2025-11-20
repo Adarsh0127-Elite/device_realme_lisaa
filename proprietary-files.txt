@@ -1,19 +1,59 @@
-# AEE
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
-
-# Audio
-odm/lib64/lib_aurisys_lvimfs.so
+odm/firmware/awinic_haptic_gun_params.bin
+odm/firmware/awinic_haptic_params.bin
+odm/lib64/liblvimfs_wrapper.so;DISABLE_CHECKELF
 odm/lib64/liblvimfs.so
-odm/lib64/liblvimfs_wrapper.so
-odm/lib64/libstdc++.so
-odm/lib64/libnxprecord.so;FIX_SONAME
+odm/lib64/lib_aurisys_lvimfs.so
+odm/lib64/libnxprecord.so:odm/lib64/libnxprecord.so;FIX_SONAME
 odm/lib64/libnxpsmartpaparser.so
 odm/lib64/libnxpspeech.so
-vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
-vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libMtkSpeechEnh.so
+vendor/lib64/libpixelflinger.so
+vendor/lib64/liboplus_audio_config.so
+vendor/bin/mt6660_calibration
+vendor/bin/rt5512_calibration
+vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib/hw/audio.primary.mt6895.so
+vendor/lib/hw/audio.r_submix.mt6895.so
+vendor/lib/lib_iir.so
+vendor/lib/lib_speech_enh.so
+vendor/lib/libaudio_engineer_test.so
+vendor/lib/libaudio_param_parser-vnd.so
+vendor/lib/libaudiocompensationfilter_vendor.so
+vendor/lib/libaudiocompensationfilterc.so
+vendor/lib/libaudiocomponentengine_vendor.so
+vendor/lib/libaudiocomponentenginec.so
+vendor/lib/libaudiocustparam_vendor.so
+vendor/lib/libaudiodcrflt_vendor.so
+vendor/lib/libaudiofmtconv.so
+vendor/lib/libaudioloudc.so
+vendor/lib/libaudioprimarydevicehalifclient.so
+vendor/lib/libaudiotoolkit_vendor.so
+vendor/lib/libaurisysdemo.so
+vendor/lib/libbessound_hd_mtk_vendor.so
+vendor/lib/libblisrc32_vendor.so
+vendor/lib/libcapctrl.so
+vendor/lib/libktvdrc.so
+vendor/lib/libktveffect.so
+vendor/lib/libktveffect_rec.so
+vendor/lib/libktveq.so
+vendor/lib/libktvns.so
+vendor/lib/libktvreverb.so
+vendor/lib/libktvsoundtouch.so
+vendor/lib/libktvvolume.so
+vendor/lib/libminiui.so
+vendor/lib/librt_extamp_intf.so
+vendor/lib/libspeech_enh_lib.so
+vendor/lib/libspeechparser_vendor.so
+vendor/lib/vendor.mediatek.hardware.audio@6.1.so
+vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so
+vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib64/hw/audio.primary.mt6895.so:vendor/lib64/hw/audio.primary.mt6895.so;FIX_SONAME
+vendor/lib64/hw/audio.r_submix.mt6895.so:vendor/lib64/hw/audio.r_submix.mt6895.so;FIX_SONAME
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
 vendor/lib64/libaudio_engineer_test.so
@@ -32,7 +72,6 @@ vendor/lib64/libaurisysdemo.so
 vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
-vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libktvdrc.so
 vendor/lib64/libktveffect.so
 vendor/lib64/libktveffect_rec.so
@@ -41,101 +80,16 @@ vendor/lib64/libktvns.so
 vendor/lib64/libktvreverb.so
 vendor/lib64/libktvsoundtouch.so
 vendor/lib64/libktvvolume.so
-vendor/lib64/libmsbc_mtk.so
-vendor/lib64/libnxp_extamp_intf.so
-vendor/lib64/liboplus_audio_config.so
+vendor/lib64/libminiui.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
-
-# Audio (Aurisys)
-odm/etc/audio/aurisys_config/aurisys_config.xml
-odm/etc/audio/aurisys_config_hifi3/aurisys_config_hifi3.xml
-vendor/etc/aurisys_config.xml
-vendor/etc/aurisys_config_hifi3.xml
-vendor/etc/aurisys_config_rv.xml
-
-# Audio (Device)
-odm/etc/audio/audio_device/audio_device.xml
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 odm/etc/audio/audio_device/common/audio_device.xml
-vendor/etc/audio_device.xml
-
-# Audio (Features)
-odm/etc/audio/oplus_audio_features.xml
-
-# Audio (LVACFS)
-odm/etc/audio/lvimfs_params/LVACFS_Configuration.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Calibration_2mic.dat
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID10_MIC_VR.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID11_HE.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID12_HE_APP1.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID13_HE_APP2.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID14_HE_Cam.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID15_HE_Conference.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID16_HE_Fast.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID17_HE_Interview.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID18_HE_Unprocess.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID19_HE_Voice.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID1_MIC_Normal.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID20_HE_VR.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID21_USB_Normal.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID22_USB_APP1.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID23_BT_Normal.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID24_BT_APP1.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID2_MIC_APP1.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID3_MIC_APP2.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID4_MIC_Cam.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID5_MIC_Conference.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID6_MIC_Fast.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID7_MIC_Interview.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID8_MIC_Unprocess.txt
-odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt
-
-# Audio (NXP)
-odm/etc/audio/nxp/Phone_bt_bt.bin
-odm/etc/audio/nxp/Phone_hsmic_hs.bin
-odm/etc/audio/nxp/Phone_mic_hp.bin
-odm/etc/audio/nxp/Phone_mic_recv.bin
-odm/etc/audio/nxp/Phone_mic_spk.bin
-odm/etc/audio/nxp/Phone_mic_spk_ev.bin
-odm/etc/audio/nxp/Phone_mic_usb.bin
-odm/etc/audio/nxp/Phone_usbmic_usb.bin
-odm/etc/audio/nxp/VoIP_App1_bt_bt.bin
-odm/etc/audio/nxp/VoIP_App1_hsmic_hs.bin
-odm/etc/audio/nxp/VoIP_App1_mic_hp.bin
-odm/etc/audio/nxp/VoIP_App1_mic_hs.bin
-odm/etc/audio/nxp/VoIP_App1_mic_recv.bin
-odm/etc/audio/nxp/VoIP_App1_mic_spk.bin
-odm/etc/audio/nxp/VoIP_App1_mic_usb.bin
-odm/etc/audio/nxp/VoIP_App1_usbmic_usb.bin
-odm/etc/audio/nxp/VoIP_App2_bt_bt.bin
-odm/etc/audio/nxp/VoIP_App2_hsmic_hs.bin
-odm/etc/audio/nxp/VoIP_App2_mic_hp.bin
-odm/etc/audio/nxp/VoIP_App2_mic_hs.bin
-odm/etc/audio/nxp/VoIP_App2_mic_recv.bin
-odm/etc/audio/nxp/VoIP_App2_mic_spk.bin
-odm/etc/audio/nxp/VoIP_App2_mic_usb.bin
-odm/etc/audio/nxp/VoIP_App2_usbmic_usb.bin
-odm/etc/audio/nxp/VoIP_App3_mic_spk.bin
-odm/etc/audio/nxp/VoIP_bt_bt.bin
-odm/etc/audio/nxp/VoIP_hsmic_hs.bin
-odm/etc/audio/nxp/VoIP_hsmic_hs_game.bin
-odm/etc/audio/nxp/VoIP_mic_hp.bin
-odm/etc/audio/nxp/VoIP_mic_hp_game.bin
-odm/etc/audio/nxp/VoIP_mic_hs.bin
-odm/etc/audio/nxp/VoIP_mic_recv.bin
-odm/etc/audio/nxp/VoIP_mic_recv_game.bin
-odm/etc/audio/nxp/VoIP_mic_spk.bin
-odm/etc/audio/nxp/VoIP_mic_spk_game.bin
-odm/etc/audio/nxp/VoIP_mic_usb.bin
-odm/etc/audio/nxp/VoIP_usbmic_usb.bin
-odm/etc/audio/nxp/VoIP_usbmic_usb_game.bin
-
-# Audio (Parameters)
+odm/etc/audio/audio_device/audio_device.xml
 odm/etc/audio/audio_param/AudioParamOptions.xml
-odm/etc/audio/audio_param/AudioParamOptions_mgvi.xml
 odm/etc/audio/audio_param/AudioParamOptions_vext.xml
 odm/etc/audio/audio_param/BtInfo_AudioParam.xml
 odm/etc/audio/audio_param/BtInfo_ParamUnitDesc.xml
@@ -234,8 +188,6 @@ odm/etc/audio/audio_param/VoWEngineFeature_AudioParam.xml
 odm/etc/audio/audio_param/VoWEngineFeature_ParamUnitDesc.xml
 odm/etc/audio/audio_param/VoWHwVad_AudioParam.xml
 odm/etc/audio/audio_param/VoWHwVad_ParamUnitDesc.xml
-odm/etc/audio/audio_param/VoWMicSetting_AudioParam.xml
-odm/etc/audio/audio_param/VoWMicSetting_ParamUnitDesc.xml
 odm/etc/audio/audio_param/VoWVoiceCommand_AudioParam.xml
 odm/etc/audio/audio_param/VoWVoiceCommand_ParamUnitDesc.xml
 odm/etc/audio/audio_param/VolumeGainMapUL_AudioParam.xml
@@ -244,135 +196,86 @@ odm/etc/audio/audio_param/VolumeGainMap_AudioParam.xml
 odm/etc/audio/audio_param/VolumeGainMap_ParamUnitDesc.xml
 odm/etc/audio/audio_param/Volume_AudioParam.xml
 odm/etc/audio/audio_param/Volume_ParamUnitDesc.xml
-vendor/etc/audio_param/AudioParamOptions_mgvi.xml
-vendor/etc/audio_param/AudioParamOptions_vext.xml
-vendor/etc/audio_param/BtInfo_AudioParam.xml
-vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
-vendor/etc/audio_param/CRSVolUI_AudioParam.xml
-vendor/etc/audio_param/CRSVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/CRSVol_AudioParam.xml
-vendor/etc/audio_param/CRSVol_ParamUnitDesc.xml
-vendor/etc/audio_param/HpImpedance_AudioParam.xml
-vendor/etc/audio_param/HpImpedance_ParamUnitDesc.xml
-vendor/etc/audio_param/MicInfo_AudioParam.xml
-vendor/etc/audio_param/MicInfo_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackACF_AudioParam.xml
-vendor/etc/audio_param/PlaybackACF_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackDRC_AudioParam.xml
-vendor/etc/audio_param/PlaybackDRC_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackHCF_AudioParam.xml
-vendor/etc/audio_param/PlaybackHCF_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackVolAna_AudioParam.xml
-vendor/etc/audio_param/PlaybackVolAna_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackVolDigi_AudioParam.xml
-vendor/etc/audio_param/PlaybackVolDigi_ParamUnitDesc.xml
-vendor/etc/audio_param/PlaybackVolUI_AudioParam.xml
-vendor/etc/audio_param/PlaybackVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/Playback_AudioParam.xml
-vendor/etc/audio_param/Playback_ParamTreeView.xml
-vendor/etc/audio_param/Playback_ParamUnitDesc.xml
-vendor/etc/audio_param/RecordDMNR_AudioParam.xml
-vendor/etc/audio_param/RecordDMNR_ParamUnitDesc.xml
-vendor/etc/audio_param/RecordFIR_AudioParam.xml
-vendor/etc/audio_param/RecordFIR_ParamUnitDesc.xml
-vendor/etc/audio_param/RecordUI_AudioParam.xml
-vendor/etc/audio_param/RecordUI_ParamUnitDesc.xml
-vendor/etc/audio_param/RecordVolUI_AudioParam.xml
-vendor/etc/audio_param/RecordVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/RecordVol_AudioParam.xml
-vendor/etc/audio_param/RecordVol_ParamUnitDesc.xml
-vendor/etc/audio_param/Record_AudioParam.xml
-vendor/etc/audio_param/Record_ParamTreeView.xml
-vendor/etc/audio_param/Record_ParamUnitDesc.xml
-vendor/etc/audio_param/RingbackVolUI_AudioParam.xml
-vendor/etc/audio_param/RingbackVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/RingbackVol_AudioParam.xml
-vendor/etc/audio_param/RingbackVol_ParamUnitDesc.xml
-vendor/etc/audio_param/SmartPa_AudioParam.xml
-vendor/etc/audio_param/SmartPa_ParamUnitDesc.xml
-vendor/etc/audio_param/SoundEnhancement_AudioParam.xml
-vendor/etc/audio_param/SoundEnhancement_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechDMNR_AudioParam.xml
-vendor/etc/audio_param/SpeechDMNR_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechEchoRef_AudioParam.xml
-vendor/etc/audio_param/SpeechEchoRef_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechGeneral_AudioParam.xml
-vendor/etc/audio_param/SpeechGeneral_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechMagiClarity_AudioParam.xml
-vendor/etc/audio_param/SpeechMagiClarity_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechNetwork_AudioParam.xml
-vendor/etc/audio_param/SpeechNetwork_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechUI_AudioParam.xml
-vendor/etc/audio_param/SpeechUI_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechVolUI_AudioParam.xml
-vendor/etc/audio_param/SpeechVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechVol_AudioParam.xml
-vendor/etc/audio_param/SpeechVol_ParamUnitDesc.xml
-vendor/etc/audio_param/Speech_AudioParam.xml
-vendor/etc/audio_param/Speech_ParamTreeView.xml
-vendor/etc/audio_param/Speech_ParamUnitDesc.xml
-vendor/etc/audio_param/USBCall_AudioParam.xml
-vendor/etc/audio_param/USBCall_ParamUnitDesc.xml
-vendor/etc/audio_param/USBDevice_AudioParam.xml
-vendor/etc/audio_param/USBDevice_ParamUnitDesc.xml
-vendor/etc/audio_param/Ultrasound_AudioParam.xml
-vendor/etc/audio_param/Ultrasound_ParamUnitDesc.xml
-vendor/etc/audio_param/UplinkConfiguration_AudioParam.xml
-vendor/etc/audio_param/UplinkConfiguration_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPDMNR_AudioParam.xml
-vendor/etc/audio_param/VoIPDMNR_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPGeneral_AudioParam.xml
-vendor/etc/audio_param/VoIPGeneral_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPUI_AudioParam.xml
-vendor/etc/audio_param/VoIPUI_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPVolUI_AudioParam.xml
-vendor/etc/audio_param/VoIPVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPVol_AudioParam.xml
-vendor/etc/audio_param/VoIPVol_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIP_AudioParam.xml
-vendor/etc/audio_param/VoIP_ParamTreeView.xml
-vendor/etc/audio_param/VoIP_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPv2DMNR_AudioParam.xml
-vendor/etc/audio_param/VoIPv2DMNR_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPv2General_AudioParam.xml
-vendor/etc/audio_param/VoIPv2General_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPv2UI_AudioParam.xml
-vendor/etc/audio_param/VoIPv2UI_ParamUnitDesc.xml
-vendor/etc/audio_param/VoIPv2_AudioParam.xml
-vendor/etc/audio_param/VoIPv2_ParamTreeView.xml
-vendor/etc/audio_param/VoIPv2_ParamUnitDesc.xml
-vendor/etc/audio_param/VoWDspAec_AudioParam.xml
-vendor/etc/audio_param/VoWDspAec_ParamUnitDesc.xml
-vendor/etc/audio_param/VoWEngineFeature_AudioParam.xml
-vendor/etc/audio_param/VoWEngineFeature_ParamUnitDesc.xml
-vendor/etc/audio_param/VoWHwVad_AudioParam.xml
-vendor/etc/audio_param/VoWHwVad_ParamUnitDesc.xml
-vendor/etc/audio_param/VoWMicSetting_AudioParam.xml
-vendor/etc/audio_param/VoWMicSetting_ParamUnitDesc.xml
-vendor/etc/audio_param/VoWVoiceCommand_AudioParam.xml
-vendor/etc/audio_param/VoWVoiceCommand_ParamUnitDesc.xml
-vendor/etc/audio_param/VolumeGainMapUL_AudioParam.xml
-vendor/etc/audio_param/VolumeGainMapUL_ParamUnitDesc.xml
-vendor/etc/audio_param/VolumeGainMap_AudioParam.xml
-vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
-vendor/etc/audio_param/Volume_AudioParam.xml
-vendor/etc/audio_param/Volume_ParamUnitDesc.xml
-
-# Audio (SmartPA parameters)
+odm/etc/audio/lvimfs_params/LVACFS_Configuration.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Calibration_2mic.dat
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID10_MIC_VR.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID11_HE.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID12_HE_APP1.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID13_HE_APP2.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID14_HE_Cam.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID15_HE_Conference.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID16_HE_Fast.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID17_HE_Interview.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID18_HE_Unprocess.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID19_HE_Voice.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID1_MIC_Normal.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID20_HE_VR.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID21_USB_Normal.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID22_USB_APP1.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID23_BT_Normal.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID24_BT_APP1.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID2_MIC_APP1.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID3_MIC_APP2.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID4_MIC_Cam.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID5_MIC_Conference.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID6_MIC_Fast.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID7_MIC_Interview.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID8_MIC_Unprocess.txt
+odm/etc/audio/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt
+odm/etc/audio/nxp/Phone_bt_bt.bin
+odm/etc/audio/nxp/Phone_hsmic_hs.bin
+odm/etc/audio/nxp/Phone_mic_hp.bin
+odm/etc/audio/nxp/Phone_mic_recv.bin
+odm/etc/audio/nxp/Phone_mic_spk.bin
+odm/etc/audio/nxp/Phone_mic_spk_ev.bin
+odm/etc/audio/nxp/Phone_mic_usb.bin
+odm/etc/audio/nxp/Phone_usbmic_usb.bin
+odm/etc/audio/nxp/VoIP_App1_bt_bt.bin
+odm/etc/audio/nxp/VoIP_App1_hsmic_hs.bin
+odm/etc/audio/nxp/VoIP_App1_mic_hp.bin
+odm/etc/audio/nxp/VoIP_App1_mic_hs.bin
+odm/etc/audio/nxp/VoIP_App1_mic_recv.bin
+odm/etc/audio/nxp/VoIP_App1_mic_spk.bin
+odm/etc/audio/nxp/VoIP_App1_mic_usb.bin
+odm/etc/audio/nxp/VoIP_App1_usbmic_usb.bin
+odm/etc/audio/nxp/VoIP_App2_bt_bt.bin
+odm/etc/audio/nxp/VoIP_App2_hsmic_hs.bin
+odm/etc/audio/nxp/VoIP_App2_mic_hp.bin
+odm/etc/audio/nxp/VoIP_App2_mic_hs.bin
+odm/etc/audio/nxp/VoIP_App2_mic_recv.bin
+odm/etc/audio/nxp/VoIP_App2_mic_spk.bin
+odm/etc/audio/nxp/VoIP_App2_mic_usb.bin
+odm/etc/audio/nxp/VoIP_App2_usbmic_usb.bin
+odm/etc/audio/nxp/VoIP_App3_mic_spk.bin
+odm/etc/audio/nxp/VoIP_bt_bt.bin
+odm/etc/audio/nxp/VoIP_hsmic_hs.bin
+odm/etc/audio/nxp/VoIP_hsmic_hs_game.bin
+odm/etc/audio/nxp/VoIP_mic_hp.bin
+odm/etc/audio/nxp/VoIP_mic_hp_game.bin
+odm/etc/audio/nxp/VoIP_mic_hs.bin
+odm/etc/audio/nxp/VoIP_mic_recv.bin
+odm/etc/audio/nxp/VoIP_mic_recv_game.bin
+odm/etc/audio/nxp/VoIP_mic_spk.bin
+odm/etc/audio/nxp/VoIP_mic_spk_game.bin
+odm/etc/audio/nxp/VoIP_mic_usb.bin
+odm/etc/audio/nxp/VoIP_usbmic_usb.bin
+odm/etc/audio/nxp/VoIP_usbmic_usb_game.bin
+odm/etc/audio/test_path/common/mixer_paths.xml
+odm/etc/audio/test_path/engineer_test_paths.xml
+odm/etc/audio/oplus_audio_features.xml
+odm/firmware/tfa98xx.cnt
+vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml
+vendor/etc/audio_policy_configuration_a2dp_offload_disabled_cg_enabled.xml
+vendor/etc/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml
+vendor/etc/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml
+vendor/etc/bluetooth_offload_audio_policy_configuration.xml
+vendor/etc/bluetooth_ums_offload_audio_policy_configuration.xml
+vendor/etc/default_volume_tables.xml
 odm/etc/audio/smartpa_param/tfa98xx.cnt
 odm/etc/audio/smartpa_param/tfa98xx_music.bin
 odm/etc/audio/smartpa_param/tfa98xx_ringtone.bin
 odm/etc/audio/smartpa_param/tfa98xx_voice.bin
 odm/etc/audio/smartpa_param/tfa98xx_voip.bin
-
-# Audio (Test path)
-odm/etc/audio/test_path/common/mixer_paths.xml
-odm/etc/audio/test_path/engineer_test_paths.xml
-
-# Audio firmware
-odm/firmware/tfa98xx.cnt
-
-# Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
@@ -381,12 +284,8 @@ vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
-
-# Bluetooth (A2DP)
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-
-# Camera
 vendor/lib64/libcamalgo.utility.so
 vendor/lib64/mt6895/libfeatureiodrv_mem.so;SYMLINK=vendor/lib64/libfeatureiodrv_mem.so
 vendor/lib64/libmidasserviceintf_aidl.so
@@ -812,8 +711,6 @@ odm/lib64/mt6895/imx766_mipi_raw_21641_IdxMgr.so;SYMLINK=odm/lib64/imx766_mipi_r
 odm/lib64/mt6895/imx766_mipi_raw_21641_tuning.so;SYMLINK=odm/lib64/imx766_mipi_raw_21641_tuning.so
 odm/lib64/mt6895/s5k3p9sp_mipi_raw_21641_IdxMgr.so;SYMLINK=odm/lib64/s5k3p9sp_mipi_raw_21641_IdxMgr.so
 odm/lib64/mt6895/s5k3p9sp_mipi_raw_21641_tuning.so;SYMLINK=odm/lib64/s5k3p9sp_mipi_raw_21641_tuning.so
-
-# Camera SQLiteModule database
 odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6895/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6895/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6895/ParameterDB_awb.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
@@ -842,8 +739,6 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mt6895/ISP_info.db;SYMLI
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ISP_info.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/top_control_data.db;MAKE_COPY_RULE_ONLY
-
-# Lisaa cam
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/mt6895/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/tone/mt6895/ParameterDB_tone.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tone/ParameterDB_tone.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6895/ParameterDB_awb.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
@@ -862,8 +757,6 @@ odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/gc02m1_mipi_raw_21641/mt689
 odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6895/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6895/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/mt6895/top_control_data.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/top_control_data.db;MAKE_COPY_RULE_ONLY
-
-# Charger firmware
 odm/firmware/fastchg/136933/oplus_vooc_fw_op10.bin
 odm/firmware/fastchg/20171/oplus_vooc_fw_op10.bin
 odm/firmware/fastchg/20353/oplus_vooc_fw_op10.bin
@@ -918,12 +811,8 @@ odm/firmware/fastchg/23251/bms_heating_config.txt
 odm/firmware/fastchg/23251/charging_thermal_config_default.txt
 odm/firmware/fastchg/charging_thermal_config_default.txt
 odm/firmware/fastchg/smart_chg_config_table.txt
-
-# Chipinfo
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
-
-# Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.conninfra.rc
@@ -936,21 +825,15 @@ vendor/firmware/soc7_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin
 vendor/firmware/soc7_0_ram_wmmcu_1b_1_hdr.bin
 vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
-
-# Display (AAL)
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libdre.so
 vendor/lib64/mt6895/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6895/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
-
-# Display (CWB)
 vendor/etc/vintf/manifest/manifest_oplus_cwb.xml
 vendor/lib64/libcwb_mtk_hidl.so
 vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
-
-# Display (Mediatek)
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/lib64/hw/hwcomposer.mtk_common.so;DISABLE_CHECKELF
@@ -961,13 +844,9 @@ vendor/lib64/libcomposer_ext.so
 vendor/lib64/libmml.so
 vendor/lib64/libnpagent.so;DISABLE_CHECKELF
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
-
-# Display (PanelChaplin)
 vendor/lib64/libPanelChaplin_wrapper.so
 odm/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/lib64/vendor.display.PanelChaplin@1.0.so
-
-# Display (Picture Quality)
 my_product/vendor/etc/cust_silky_brightness_boe.xml:vendor/etc/cust_silky_brightness_boe.xml
 my_product/vendor/etc/cust_silky_brightness_tianma.xml:vendor/etc/cust_silky_brightness_tianma.xml
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
@@ -1003,15 +882,11 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/vendor.oplus.hardware.display.MixLut3D-V1-ndk_platform.so
-
-# Display (Pixelworks Iris)
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
 vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
-
-# Fingerprint
 odm/bin/init.oplus.fingerprints.sh
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
@@ -1023,18 +898,12 @@ odm/lib64/anc.hal.so
 odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/libgf_hal_G3.so
 odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
-
-# FMRadio
 vendor/etc/init/init.fmradio_drv.rc
 vendor/firmware/fm_cust.cfg
 vendor/firmware/mt6635_fm_v1_coeff.bin
 vendor/firmware/mt6635_fm_v1_patch.bin
-
-# Gatekeeper
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
-
-# GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
@@ -1070,8 +939,6 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 vendor/lib64/mt6895/libDR.so;SYMLINK=vendor/lib64/libDR.so
-
-# Graphics (MediaTek + ARM mali)
 vendor/lib64/egl/mt6895/libGLES_mali.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLES_mali.so;DISABLE_CHECKELF
 vendor/lib64/hw/mt6895/vulkan.mali.so;SYMLINK=vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/libgpu_aux.so;DISABLE_CHECKELF
@@ -1079,8 +946,6 @@ vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/mt6895/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib64/arm.graphics-V1-ndk_platform.so
-
-# Graphics (Mediatek MEOW)
 vendor/etc/meow.cfg
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -1090,16 +955,10 @@ vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
-
-# Graphics firmware (ARM mali)
 vendor/firmware/mali_csffw.bin
 vendor/firmware/mali_csffw_reload.bin
-
-# Health
 vendor/bin/fuelgauged
 vendor/lib64/libfgauge_gm30.so
-
-# IMS
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
 system_ext/framework/mediatek-common.jar
@@ -1115,7 +974,7 @@ system_ext/lib64/libimsma_socketwrapper.so
 system_ext/lib64/libmtk_vt_service.so
 system_ext/lib64/libmtk_vt_wrapper.so
 system_ext/lib64/libsignal.so
-system_ext/lib64/libsink.so
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME
 system_ext/lib64/libsource.so
 system_ext/lib64/libvcodec_cap.so
 system_ext/lib64/libvcodec_capenc.so
@@ -1147,8 +1006,6 @@ vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
-
-# Keymint
 vendor/bin/hw/android.hardware.security.keymint-service.trustonic
 vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.xml:vendor/etc/permissions/android.hardware.hardware_keystore.trustonic-keymint.xml
@@ -1156,8 +1013,6 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xm
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
-
-# Media (Codec2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
 vendor/etc/media_codecs_performance.xml
@@ -1182,8 +1037,6 @@ vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libmp3dec_mtk.so
-
-# Media (MMS)
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
@@ -1194,8 +1047,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
-
-# MediaTek Vision Processing Unit
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_clc_cl_compiler.so
 vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
@@ -1212,15 +1063,9 @@ vendor/lib64/libmvpu_runtime.so
 vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
-
-# Modules
 vendor/bin/init.insmod.sh
 vendor/etc/init.insmod.mt6895.cfg
-
-# Native public libraries
 vendor/etc/public.libraries.txt
-
-# Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/nhw
@@ -1257,14 +1102,10 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
-
-# NFC
 odm/etc/nfc/libnfc-mtp-SN100.conf_216BE:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_216BE:vendor/etc/libnfc-nci.conf
 odm/etc/libese-nxp.conf:vendor/etc/libese-nxp.conf
 odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_68:vendor/firmware/sn100u.bin
-
-# NVRAM
 vendor/bin/fuelgauged_nvram
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/nvram_daemon
@@ -1279,24 +1120,16 @@ vendor/lib64/libnvram_sec.so
 vendor/lib64/libstorage_otp.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
-
-# OLC
 odm/lib64/libolc_vnd.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so;MODULE_SUFFIX=_odm
-
-# Osense
 odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensehalclient.so
 odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
-
-# Power
 odm/lib64/liboplus-uah-client.so
 odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so
 vendor/etc/init/bootperf.rc
 vendor/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
-
-# Radio
 odm/etc/ecc_list.xml
 odm/etc/plugin_config.xml
 odm/lib64/lib-virtual-modem-protos.so
@@ -1371,8 +1204,6 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/lib64/vendor.oplus.hardware.appradioaidl-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.communicationcenter-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.radio-V2-ndk_platform.so
-
-# Sensors
 odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service
 odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc
 odm/etc/sensor/sensor_config.json
@@ -1386,8 +1217,6 @@ vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6895.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
-
-# Soter
 vendor/bin/hw/vendor.trustonic.soter@1.0-service
 vendor/etc/init/vendor.trustonic.soter@1.0-service.rc
 vendor/etc/vintf/manifest/manifest_soter_aidl.xml
@@ -1395,8 +1224,6 @@ vendor/lib64/libMcTeeSoter.so
 vendor/lib64/libSoterProvision.so
 vendor/lib64/soter_attk_provision.so
 vendor/lib64/vendor.trustonic.hardware.soter-V1-ndk_platform.so
-
-# Tether offload
 vendor/bin/hw/tetheroffloadservice
 vendor/bin/netdagent
 vendor/etc/init/netdagent.rc
@@ -1405,8 +1232,6 @@ vendor/etc/init/tetheroffloadservice.rc
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
-
-# Touch
 odm/bin/touchDaemon
 odm/bin/hw/vendor-oplus-hardware-touch-V2-service
 odm/etc/init/init.touchDaemon.rc
@@ -1414,8 +1239,6 @@ odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc
 odm/etc/vintf/manifest/manifest_touch_aidl.xml
 odm/lib64/vendor.oplus.hardware.touch-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.touch-V2-ndk_platform.so
-
-# Touchpanel firmware
 odm/firmware/tp/140827/FW_S3910_BOE.img
 odm/firmware/tp/140827/FW_S3910_BOE_FAE.img
 odm/firmware/tp/140827/FW_S3910_TIANMA.img
@@ -1519,8 +1342,6 @@ odm/firmware/tp/23021/FW_FT3681_VXN_FAE.img
 odm/firmware/tp/23021/FW_FT3681_VXN_sys_edge_touch_config.img
 odm/firmware/tp/23021/LIMIT_FT3681_BOE.img
 odm/firmware/tp/23021/LIMIT_FT3681_VXN.img
-
-# Trusted Execution Environment (TEE)
 odm/vendor/app/mcRegistry/03020000000000000000000000000000.tabin
 odm/vendor/app/mcRegistry/033c0000000000000000000000000000.drbin
 odm/vendor/app/mcRegistry/04320000000000000000000000000000.tlbin
@@ -1554,8 +1375,6 @@ vendor/etc/init/tee.rc
 vendor/etc/init/trustonic.rc
 vendor/lib64/libMcClient.so
 vendor/lib64/libTEECommon.so
-
-# Vibrator firmware
 odm/firmware/100ms_RTP_300.bin
 odm/firmware/120ms_RTP_301.bin
 odm/firmware/140ms_RTP_302.bin
@@ -1587,8 +1406,6 @@ odm/firmware/aw8697_haptic_170_soft.bin
 odm/firmware/aw8697_haptic_235.bin
 odm/firmware/aw8697_rtp.bin
 odm/firmware/awinic_haptic_params.bin
-
-# Widevine
 odm/lib64/liboemcrypto.so
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
@@ -1597,8 +1414,6 @@ vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-
-# Wifi
 odm/etc/wifi/wifi.cfg
 odm/etc/wifi/wifi_active_channel.cfg
 odm/etc/wifi/wifi_passive_channel.cfg
