@@ -20,7 +20,6 @@ on init
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-6
     write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
 
     # Disable multiple kswapd threads
@@ -67,7 +66,7 @@ on boot
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
-    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/swappiness 60
 
     # Adjust watermark level
     write /proc/sys/vm/watermark_scale_factor 200
