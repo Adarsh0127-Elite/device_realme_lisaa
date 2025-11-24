@@ -47,6 +47,7 @@ vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/liboplus_audio_config.so
 vendor/lib64/librt_extamp_intf.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
@@ -1117,7 +1118,7 @@ system_ext/lib64/libimsma_socketwrapper.so
 system_ext/lib64/libmtk_vt_service.so
 system_ext/lib64/libmtk_vt_wrapper.so
 system_ext/lib64/libsignal.so
-system_ext/lib64/libsink.so
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME
 system_ext/lib64/libsource.so
 system_ext/lib64/libvcodec_cap.so
 system_ext/lib64/libvcodec_capenc.so
