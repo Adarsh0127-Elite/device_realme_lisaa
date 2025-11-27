@@ -12,14 +12,18 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := lisaa
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_MODEL := RMX3561
+PRODUCT_MODEL := RMX3563
 PRODUCT_NAME := lineage_lisaa
 
-PRODUCT_SYSTEM_DEVICE := RMX3561
-PRODUCT_SYSTEM_NAME := RMX3561
+PRODUCT_SYSTEM_DEVICE := RMX3563
+PRODUCT_SYSTEM_NAME := RMX3563
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sys_mssi_64_cn_armv82-user 14 UKQ1.230924.001 1727668240847 release-keys" \
-    BuildFingerprint=realme/RMX3561/RE5489:12/SP1A.210812.016/S.202208240000:user/release-keys
+    BuildDesc="sys_mssi_64_cn_armv82-user 14 UKQ1.230924.001 1759992137515 release-keys" \
+    BuildFingerprint=realme/RMX3563/RED8BEL1:12/SP1A.210812.016/1760168284353:user/release-keys \
+    DeviceName=RED8BEL1 \
+    DeviceProduct=RMX3563 \
+    SystemDevice=RED8BEL1 \
+    SystemName=RMX3563  
