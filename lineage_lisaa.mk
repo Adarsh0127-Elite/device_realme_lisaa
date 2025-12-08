@@ -6,7 +6,8 @@
 # Inherit from the custom device configuration.
 $(call inherit-product, device/realme/lisaa/device.mk)
 
-# Inherit from the LineageOS configuration.
+# Inherit from the AxionAOSP configuration.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Realme
@@ -26,4 +27,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=RED8BEL1 \
     DeviceProduct=RMX3563 \
     SystemDevice=RED8BEL1 \
-    SystemName=RMX3563  
+    SystemName=RMX3563
+
+# AxionAOSP
+TARGET_ENABLE_BLUR := true
+AXION_CAMERA_REAR_INFO := 50MP,8MP,2MP
+AXION_CAMERA_FRONT_INFO := 16MP
+AXION_MAINTAINER := adarsh_8300u
+AXION_PROCESSOR := Dimensity_8100
+BYPASS_CHARGE_SUPPORTED := true
+TORCH_STR_SUPPORTED := true
+TARGET_NEEDS_DOZE_FIX := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+PERF_ANIM_OVERRIDE := true
