@@ -242,7 +242,8 @@ PRODUCT_PACKAGES += \
     ApertureResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
-    OplusDozeResTarget 
+    packages \
+    OplusDozeResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
