@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    RealmeAddons
+
 # Display
 $(call soong_config_set,surfaceflinger,has_mtk_udfps,true)
 
