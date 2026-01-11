@@ -7,7 +7,6 @@
 $(call inherit-product, device/realme/lisaa/device.mk)
 
 # Inherit from the AxionAOSP configuration.
-TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Realme
@@ -29,14 +28,32 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemDevice=RED8BEL1 \
     SystemName=RMX3563
 
-# AxionAOSP
-TARGET_ENABLE_BLUR := true
+# Axion Stuff
 AXION_CAMERA_REAR_INFO := 50MP,8MP,2MP
 AXION_CAMERA_FRONT_INFO := 16MP
 AXION_MAINTAINER := adarsh_8300u
 AXION_PROCESSOR := Dimensity_8100
+
+# Axion Optional Flags
+TARGET_ENABLE_BLUR := true
+
+# Performance Features
 BYPASS_CHARGE_SUPPORTED := true
-TORCH_STR_SUPPORTED := true
-TARGET_NEEDS_DOZE_FIX := true
-TARGET_INCLUDES_LOS_PREBUILTS := true
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
 PERF_ANIM_OVERRIDE := true
+
+# ScrollOptimizer
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.perf.scroll_opt=true \
+
+persist.sys.perf.scroll_opt.heavy_app=2
+
+# Prebuilt Apps
+TARGET_INCLUDES_LOS_PREBUILTS := true
+
+# Flashlight strength
+TORCH_STR_SUPPORTED := true
+
+# Doze fix
+TARGET_NEEDS_DOZE_FIX := true
