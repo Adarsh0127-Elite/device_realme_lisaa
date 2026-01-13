@@ -305,3 +305,6 @@ ro.vendor.wlan.gen=gen4m_6895
 
 # Zygote
 zygote.critical_window.minute=10
+
+#GPU
+persist.sys.phh.mtk_ged_kpi=1
