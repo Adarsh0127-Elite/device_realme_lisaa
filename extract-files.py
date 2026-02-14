@@ -1,4 +1,5 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#
 # SPDX-FileCopyrightText: 2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -64,17 +65,7 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/mt6895/libcam.hal3a.ctrl.so',
      'vendor/lib64/mt6895/libmtkcam_request_requlator.so',
      'vendor/lib64/libcustomer_cameradata.so'): blob_fixup()
-        .add_needed('libprocessgroup_shim.so')
-        #.binary_regex_replace(
-        #    b'OnScreenFingerprintDimLayer',
-        #    b'SurfaceView[UdfpsController'
-        #)
-        .binary_regex_replace(
-            b'OnScreenFingerprintPressedIcon',
-            b'SurfaceView[UdfpsControllerOve'
-    ),
-    # CHECK IF YOU NEED TO PATCH BOTH 'OnScreenFingerprintXXXXXX' OR ONLY ONE OF THEM
-    # AND IF YOU NEED TO ENABLE MTK UDFPS NATIVE WITH BOTH, ONLY ONE OF THEM OR WITH NONE
+        .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
