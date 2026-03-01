@@ -84,6 +84,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Dolby-specific Settings
+PRODUCT_PACKAGES += \
+    dolby
+
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -368,3 +372,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/realme/lisaa/lisaa-vendor.mk)
+
+# Dolby
+$(call inherit-product, $(DEVICE_PATH)/dolby/dolby.mk)
