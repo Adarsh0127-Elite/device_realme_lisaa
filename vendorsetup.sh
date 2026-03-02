@@ -11,9 +11,3 @@ cd frameworks/native
 git fetch https://github.com/Adarsh0127-Elite/android_frameworks_native.git
 git cherry-pick 1f9157df9aaba97d0ed6be1f7f657aa1939c9225
 cd ../..
-
-echo "Applying frameworks/base patch 1"
-cd frameworks/base
-git fetch https://github.com/Adarsh0127-Elite/android_frameworks_base.git
-git cherry-pick 2f559990e06c6c2254d88ab3d3549fc8b1a8ba82
-cd ../..
