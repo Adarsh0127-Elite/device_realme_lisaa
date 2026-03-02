@@ -104,6 +104,8 @@ PRODUCT_PACKAGES += \
     RealmeAddons
 
 # Display
+$(call soong_config_set,surfaceflinger,has_mtk_udfps,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek-mali
@@ -136,8 +138,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Fingerprint
-$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
-
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oplus
 
@@ -253,8 +253,7 @@ PRODUCT_PACKAGES += \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
     packages \
-    OplusDozeResTarget \
-    LineageSystemUIResTarget
+    OplusDozeResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
