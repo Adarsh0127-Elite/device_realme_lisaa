@@ -26,14 +26,8 @@ namespace_imports = [
     'hardware/oplus',
 ]
 
-
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
-
-
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
     ('libsink',): lib_fixup_remove,
 }
 
@@ -45,10 +39,8 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libstdc++.so'),
     'odm/lib64/vendor.oplus.hardware.hdcp-V1-ndk_platform.so': blob_fixup()
         .replace_needed('android.hardware.common-V2-ndk_platform.so', 'android.hardware.common-V2-ndk.so'),
-    ('system_ext/etc/init/init.vtservice.rc', 'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc'): blob_fixup()
+    'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
         .regex_replace('start', 'enable'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
         .add_needed('libaudioclient_mt6895_shim.so'),
     'system_ext/lib64/libsource.so': blob_fixup()
