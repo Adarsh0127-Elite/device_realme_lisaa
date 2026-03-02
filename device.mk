@@ -165,7 +165,16 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek-recovery
 
 # IMS
-$(call inherit-product, vendor/mediatek/ims/ims.mk)
+PRODUCT_PACKAGES += \
+    ImsService
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml \
+
+# MTK IMS Overlays
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 

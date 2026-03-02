@@ -17,6 +17,3 @@ cd frameworks/base
 git fetch https://github.com/Adarsh0127-Elite/android_frameworks_base.git
 git cherry-pick 2f559990e06c6c2254d88ab3d3549fc8b1a8ba82
 cd ../..
-
-echo "Clonning IMS"
-git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
