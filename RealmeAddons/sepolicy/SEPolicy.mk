@@ -1,2 +1,8 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+DEVICE_PATH := device/realme/lisaa
+
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    packages/apps/RealmeAddons/sepolicy/vendor
+    $(DEVICE_PATH)/RealmeAddons/sepolicy/vendor
