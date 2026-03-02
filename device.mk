@@ -136,7 +136,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Fingerprint
-$(call soong_config_set,surfaceflinger,has_mtk_udfps,true)
+$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
+$(call soong_config_set,surfaceflinger,mtk_dim_layer,OnScreenFingerprintPressedIcon)
 
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oplus
@@ -244,7 +245,8 @@ PRODUCT_PACKAGES += \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
     packages \
-    OplusDozeResTarget
+    OplusDozeResTarget \
+    LineageSystemUIResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
