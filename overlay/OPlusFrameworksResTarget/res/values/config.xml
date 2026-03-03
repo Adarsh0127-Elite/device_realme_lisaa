@@ -312,6 +312,9 @@
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
+         <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
+
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
