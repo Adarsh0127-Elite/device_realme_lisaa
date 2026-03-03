@@ -377,3 +377,6 @@ $(call inherit-product, vendor/realme/lisaa/lisaa-vendor.mk)
 
 # Dolby
 $(call inherit-product, $(DEVICE_PATH)/dolby/dolby.mk)
+
+# Include keys
+-include vendor/lineage-priv/keys/keys.mk
