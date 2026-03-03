@@ -1,6 +1,3 @@
-# Alert Slider
-type vendor_proc_tri_state_key, fs_type, proc_type;
-
 # Audio
 type vendor_proc_oplus_audio, fs_type, proc_type;
 
