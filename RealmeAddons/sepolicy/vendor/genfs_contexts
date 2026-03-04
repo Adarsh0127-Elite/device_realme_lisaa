@@ -1,9 +1,0 @@
-# GPU
-genfscon sysfs /class/kgsl/kgsl-3d0                                                                               u:object_r:vendor_sysfs_kgsl:s0
-
-# Thermal
-genfscon sysfs /class/thermal/thermal_message                                                                     u:object_r:sysfs_thermal:s0
-
-# Smart Charging
-genfscon sysfs /devices/virtual/oplus_chg/battery/cool_down                                                       u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /class/power_supply/battery/cool_down                                                              u:object_r:vendor_sysfs_battery_supply:s0
