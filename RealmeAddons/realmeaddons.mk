@@ -9,4 +9,4 @@ PRODUCT_PACKAGES += \
     RealmeAddons
 
 # RealmeAddons sepolicy
-include packages/apps/RealmeAddons/sepolicy/SEPolicy.mk
+include device/realme/lisaa/RealmeAddons/sepolicy/SEPolicy.mk

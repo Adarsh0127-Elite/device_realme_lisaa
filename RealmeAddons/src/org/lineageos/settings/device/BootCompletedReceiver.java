@@ -27,7 +27,6 @@ import androidx.preference.PreferenceManager;
 import org.lineageos.settings.device.battery.BypassChargingUtils;
 import org.lineageos.settings.device.battery.SmartChargingUtils;
 import org.lineageos.settings.device.battery.PowerStateMonitorService;
-import org.lineageos.settings.device.camera.CameraAppUtils;
 import org.lineageos.settings.device.charginganimation.ChargingMonitorService;
 import org.lineageos.settings.device.display.AntiFlikerUtils;
 import org.lineageos.settings.device.display.AutoHBMService;
@@ -69,9 +68,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Restore thermal profile state
         ThermalUtils.restore(context);
-
-        // Restore camera app selection
-        CameraAppUtils.restore(context);
 
         // Start power state monitor service
         Intent serviceIntent = new Intent(context, PowerStateMonitorService.class);
