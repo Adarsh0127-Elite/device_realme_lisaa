@@ -74,7 +74,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so') 
         .binary_regex_replace(b'/my_product/vendor/etc/cust_silky_brightness_%s_%s.xml', b'/vendor/etc/cust_silky_brightness_%s_%s.xml\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
         .binary_regex_replace(b'/my_product/vendor/etc/cust_silky_brightness_%s.xml', b'/vendor/etc/cust_silky_brightness_%s.xml\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-        .replace_needed('libutils.so', 'libutils-v32.so'),
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/lib3a.ae.pipe.so', 'vendor/lib64/mt6895/lib3a.awbsync.so', 'vendor/lib64/mt6895/lib3a.flash.so',
     'vendor/lib64/mt6895/lib3a.sensors.color.so', 'vendor/lib64/mt6895/lib3a.sensors.flicker.so'): blob_fixup()
         .add_needed('liblog.so'),
