@@ -35,6 +35,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/android.hardware.ir-service': blob_fixup()
         .replace_needed('android.hardware.ir-V1-ndk_platform.so', 'android.hardware.ir-V1-ndk.so'),
+    'odm/bin/touchDaemo': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'odm/lib64/liblvimfs_wrapper.so': blob_fixup()
         .remove_needed('libstdc++.so'),
     'odm/lib64/vendor.oplus.hardware.hdcp-V1-ndk_platform.so': blob_fixup()
@@ -60,7 +62,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/mnld', 'vendor/lib64/liboplus_mtkcam_lightsensorprovider.so', 'vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so', 'vendor/lib64/mt6895/libaalservice.so'): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
-        .add_needed('libstagefright_foundation-v33.so'),
+        .add_needed('libstagefright_foundation-v33.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/hw/hwcomposer.mtk_common.so',
      'vendor/lib64/mt6895/libcam.hal3a.so',
      'vendor/lib64/mt6895/libcam.hal3a.ctrl.so',
@@ -82,6 +85,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/lib3a.ae.pipe.so', 'vendor/lib64/mt6895/lib3a.awbsync.so', 'vendor/lib64/mt6895/lib3a.flash.so',
     'vendor/lib64/mt6895/lib3a.sensors.color.so', 'vendor/lib64/mt6895/lib3a.sensors.flicker.so'): blob_fixup()
         .add_needed('liblog.so'),
+    'vendor/lib64/librt_extamp_intf.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
         .replace_needed('android.frameworks.stats-V1-ndk_platform.so', 'android.frameworks.stats-V1-ndk.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
