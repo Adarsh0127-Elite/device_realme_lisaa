@@ -7,6 +7,7 @@
 $(call inherit-product, device/realme/lisaa/device.mk)
 
 # Inherit from the LineageOS configuration.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Realme
@@ -26,4 +27,25 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=RED8BEL1 \
     DeviceProduct=RMX3563 \
     SystemDevice=RED8BEL1 \
-    SystemName=RMX3563  
+    SystemName=RMX3563
+
+# AxionAOSP
+TARGET_INCLUDE_VIPERFX := true
+AXION_CAMERA_REAR_INFO := 50MP,8MP,2MP
+AXION_CAMERA_FRONT_INFO := 16MP
+AXION_MAINTAINER := adarsh_8300u
+AXION_PROCESSOR := Mediatek_8100
+BYPASS_CHARGE_SUPPORTED := true
+BYPASS_CHARGE_TOGGLE_PATH := /sys/class/power_supply/battery/input_suspend
+BYPASS_CHARGE_LEVEL_PATH := /sys/devices/platform/google,charger/charge_stop_level
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := performance
+PERF_ANIM_OVERRIDE := true
+GPU_FREQS_PATH := /sys/devices/platform/28000000.mali/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/devices/platform/28000000.mali/hint_min_freq
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
+TORCH_STR_SUPPORTED := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+TARGET_NEEDS_DOZE_FIX := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,75,90,120,144
