@@ -8,5 +8,5 @@
     <bool name="config_udfpsMtkGhbmDimming">true</bool>
 
     <!-- Name of the UDFPS HBM DimLayer for the HWComposer -->
-    <string name="config_udfpsHbmDimLayer" translatable="false">NTFingerprintDimLayer</string>
+    <string name="config_udfpsHbmDimLayer" translatable="false">OnScreenFingerprintPressedIcon</string>
 </resources>
